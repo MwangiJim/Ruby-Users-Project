@@ -1,0 +1,23 @@
+<h1>Friend List</h1>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+   <tbody>
+  <% @friends.each do |friend| %>
+      <tr class="table-primary table-hover">
+       <td> <%= render friend %> <p>
+        <%= link_to "Show this friend", friend ,class:"btn btn-secondary"%>
+      </p></td>
+       </tr>
+  <% end %>
+   </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path ,class:"btn btn-secondary"%>
